@@ -1,4 +1,7 @@
 #include "Mundo.h"
+#include "Pais.h"
+#include "jugador.h"
+#include "random.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -56,5 +59,6 @@ void conectar_vecino_direccion(struct pais* paisLocal, struct pais* paisVecino, 
         paisLocal->oeste = paisVecino;
         paisVecino->este = paisLocal;
     }
+
 
 }
