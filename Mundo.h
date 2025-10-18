@@ -26,7 +26,6 @@ void conectar_vecino_direccion(struct pais* paisLocal, struct pais* paisVecino, 
 void asignar_aspectos_iniciales(struct mundo* mundo);
 void posicionar_jugadores(struct mundo* mundo);
 void mostrar_mapa(struct mundo* mundo);
-struct pais* buscar_pais_por_diminutivo(struct mundo* mundo, const char* dim);
 int pais_perdido(struct pais* pais); //verifica si un pais esta muerto (todos los aspectos en 3)
 void contagiar(struct mundo* mundo);
 int condicion_victoria(struct mundo* mundo);  // 1 si hay algun aspecto erradicado en todos los países
@@ -34,3 +33,4 @@ int condicion_derrota(struct mundo* mundo);   // 1 si quedan <=3 países activos
 void liberar_mundo(struct mundo* mundo); //libera la memoria del mundo
 
 #endif
+
