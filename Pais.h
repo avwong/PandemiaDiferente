@@ -12,7 +12,6 @@
 struct pais{
     //datos del país
     char* nombre;
-    char diminutivo[4]; // 3 letras + '\0'
     int aspectos[MAX_ASPECTOS]; //lista con los aspectos de cada pais
     int n_aspectos; //número actual de aspectos
     int n_vecinos; //número de países vecinos
@@ -45,6 +44,7 @@ struct pais* buscar_pais(struct lista_paises* lista, char *nombre);
 void agregar_vecino(struct pais* paisLocal, struct pais* vecino);
 void eliminar_pais(struct lista_paises* lista, struct pais* paisEliminar);
 void liberar_lista(struct lista_paises* lista); //limpia toda la memoria
+
 
 
 #endif
