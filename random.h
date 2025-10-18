@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-void crear_random(unsigned int seed); //inicializa el generador de números aleatorios con una semilla
+void crear_random(); //inicializa el generador de números aleatorios
 int random_int(int min, int max); //devuelve un número entero aleatorio entre min y max
 void mezclar_arreglo(int* arreglo, int totalNumeros); //mezcla un arreglo de enteros para luego seleccionar países al azar al mismo tiempo (sin que se repitan)
+
 
 #endif
