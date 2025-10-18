@@ -8,7 +8,7 @@
 #include "jugador.h"
 #include "Pais.h"
 
-#define NUM_PAISES 33 //numero total de paises
+#define NUM_PAISES 20 //numero total de paises
 #define MAX_ASPECTOS 5 //numero maximo de aspectos por pais
 
 //Estructura del mundo
@@ -33,4 +33,5 @@ int condicion_derrota(struct mundo* mundo);   // 1 si quedan <=3 países activos
 void liberar_mundo(struct mundo* mundo); //libera la memoria del mundo
 
 #endif
+
 
