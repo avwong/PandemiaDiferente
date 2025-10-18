@@ -6,7 +6,7 @@
 
 
 //crea un país
-struct pais* crear_pais(char *nombre) {
+struct pais* crear_pais(char *nombre, char* diminutivo) {
     /*
     E: nombre del pais
     S: el país creado
@@ -23,6 +23,7 @@ struct pais* crear_pais(char *nombre) {
     //inicializar nombre
     nuevoPais->nombre = calloc(strlen(nombre) + 1, sizeof(char));
     strcpy(nuevoPais->nombre, nombre); //guarda el nombre en la memoria que reserve
+    strcpy(nuevoPais->diminutivo, diminutivo);
 
     //inicializar aspectos
     nuevoPais->n_aspectos = 0; //inicia sin aspectos
@@ -235,3 +236,4 @@ void liberar_lista(struct lista_paises* lista){
     free(lista); //liberar la memoria de la lista
 
 }
+
