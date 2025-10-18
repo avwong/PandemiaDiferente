@@ -20,9 +20,23 @@ struct pais* crear_pais(char *nombre) {
         return NULL; //algo anda mal
     }
 
-    nuevoPais->nombre = nombre;
+    //inicializar nombre
+    nuevoPais->nombre = calloc(strlen(nombre) + 1, sizeof(char));
+    strcpy(nuevoPais->nombre, nombre); //guarda el nombre en la memoria que reserve
+
+    //inicializar aspectos
     nuevoPais->n_aspectos = 0; //inicia sin aspectos
+    //TODO: los aspectos son el nombre de la problematica. no un numero, luego el aspecto tiene un valor asociado (0-3)
+    for (int i = 0; i < MAX_ASPECTOS; i++) {
+        nuevoPais->aspectos[i] = 0; //empiezan en 0
+    }
+
+    //inicializar vecinos
     nuevoPais->n_vecinos = 0; //inicia sin vecinos
+    for (int i = 0; i < MAX_VECINOS; i++) {
+        nuevoPais->vecinos[i] = NULL;
+    }
+
     nuevoPais->ant = NULL;
     nuevoPais->sigt = NULL;
 
@@ -219,4 +233,5 @@ void liberar_lista(struct lista_paises* lista){
     }
 
     free(lista); //liberar la memoria de la lista
+
 }
