@@ -12,6 +12,7 @@
 struct pais{
     //datos del país
     char* nombre;
+    char diminutivo[4]; //abreviacion del nombre del pais
     int aspectos[MAX_ASPECTOS]; //lista con los aspectos de cada pais
     int n_aspectos; //número actual de aspectos
     int n_vecinos; //número de países vecinos
@@ -48,3 +49,4 @@ void liberar_lista(struct lista_paises* lista); //limpia toda la memoria
 
 
 #endif
+
