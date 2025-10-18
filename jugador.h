@@ -12,8 +12,8 @@ struct jugador{
 //FUNCIONES
 void crear_jugador(struct jugador *jugador, char* nombre, struct pais* inicio);
 
-// Mueve el jugador de su país actual a otro destino
-// Devuelve 1 si el movimiento fue exitoso, 0 si no
-int mover(struct jugador* jugador, struct pais* destino);
+// Mueve el jugador de su país actual a un vecino
+int mover(struct jugador* jugador, char direccion);
 
 #endif
+
