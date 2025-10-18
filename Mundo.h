@@ -20,7 +20,7 @@ struct mundo {
 };
 
 //FUNCIONES
-struct mundo* crear_mundo(int n_aspectos);
+struct mundo* crear_mundo(char* nombreMundo, int n_aspectos);
 void crear_paises(struct mundo* mundo); //agrega los paises al mundo
 void conectar_vecino_direccion(struct pais* paisLocal, struct pais* paisVecino, char direccion);
 void asignar_aspectos_iniciales(struct mundo* mundo);
@@ -33,5 +33,6 @@ int condicion_derrota(struct mundo* mundo);   // 1 si quedan <=3 países activos
 void liberar_mundo(struct mundo* mundo); //libera la memoria del mundo
 
 #endif
+
 
 
