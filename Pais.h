@@ -38,7 +38,7 @@ struct lista_paises{
 };
 
 //FUNCIONES
-struct pais* crear_pais(char* nombre);
+struct pais* crear_pais(char* nombre, char* diminutivo);
 struct lista_paises* crear_lista_paises();
 int insertar_pais(struct lista_paises* lista, struct pais* nuevoPais);
 struct pais* buscar_pais(struct lista_paises* lista, char *nombre);
@@ -49,4 +49,5 @@ void liberar_lista(struct lista_paises* lista); //limpia toda la memoria
 
 
 #endif
+
 
