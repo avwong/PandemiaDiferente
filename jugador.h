@@ -5,8 +5,9 @@
 
 // Estructura para representar un jugador
 struct jugador{
-    char* nombre;
+    char* nombre; //colectivo u ONU
     struct pais* posicion; //país donde está el jugador actualmente
+    int acciones_restantes; //4 acciones por turno
 };
 
 //FUNCIONES
@@ -16,4 +17,5 @@ void crear_jugador(struct jugador *jugador, char* nombre, struct pais* inicio);
 int mover(struct jugador* jugador, char direccion);
 
 #endif
+
 
